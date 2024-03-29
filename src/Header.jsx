@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-
+import logo from "../src/assets/logo2.PNG";
 function Header() {
   return (
     <nav>
@@ -8,7 +8,9 @@ function Header() {
         <Col md={2}></Col>
         <Col md={8}>
           <Row className="">
-            <Col md={3}></Col>
+            <Col md={3} className="d-flex justify-content-end align-items-center">
+              <img src={logo} className="" />
+            </Col>
             <Col
               md={9}
               className="d-flex justify-content-end align-items-center gap-4 p-4"

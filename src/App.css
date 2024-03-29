@@ -123,3 +123,9 @@ nav {
 .card_body{
   height: 35vh !important;
 }
+
+.hero_section .span1 {
+  background-image: linear-gradient(to right, #d8ff1a, #15ff99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

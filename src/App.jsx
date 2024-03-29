@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import ServicesSection from "./ServicesSection";
+import Footer from "./Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +14,8 @@ function App() {
     <>
       <Header />
       <HeroSection />
-      <ServicesSection/>
+      <ServicesSection />
+      <Footer />
     </>
   );
 }
