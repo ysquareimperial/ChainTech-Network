@@ -2,14 +2,17 @@ import React from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { Card, Col, Row } from "reactstrap";
 import logo from "../src/assets/logo.png";
-import cardImg from "../src/assets/womanI.png";
+import cardImg1 from "../src/assets/womanI.png";
+import cardImg2 from "../src/assets/sec.PNG";
+import cardImg3 from "../src/assets/block.PNG";
+import cardImg4 from "../src/assets/motion.PNG";
 function ServicesSection() {
   const cardDetails = [
     {
       cardLogo: logo,
       cardHeading: "Join Development",
       cardText: "Blockchain Development",
-      cardImage: cardImg,
+      cardImage: cardImg1,
       cardButton: (
         <button>
           Explore <IoIosArrowRoundForward className="card_btn_icon" />
@@ -20,7 +23,41 @@ function ServicesSection() {
       cardLogo: logo,
       cardHeading: "Join Development",
       cardText: "Blockchain Development",
-      cardImage: cardImg,
+      cardClass: "card2",
+      cardImage: cardImg3,
+      cardButton: (
+        <button style={{ backgroundColor: "black", color: "white" }}>
+          Explore{" "}
+          <IoIosArrowRoundForward className="card_btn_icon text-black" />
+        </button>
+      ),
+    },
+    {
+      cardLogo: logo,
+      cardHeading: "Join Development",
+      cardText: (
+        <p className="m-0">
+          Security <br /> ASS
+        </p>
+      ),
+      cardClass: "card3",
+      cardImage: cardImg2,
+      cardButton: (
+        <button>
+          Explore <IoIosArrowRoundForward className="card_btn_icon" />
+        </button>
+      ),
+    },
+    {
+      cardLogo: logo,
+      cardHeading: "Join Development",
+      cardText: (
+        <p className="m-0">
+          Motion <br /> Graphic
+        </p>
+      ),
+      cardClass: "card4",
+      cardImage: cardImg4,
       cardButton: (
         <button>
           Explore <IoIosArrowRoundForward className="card_btn_icon" />
@@ -31,7 +68,7 @@ function ServicesSection() {
       cardLogo: logo,
       cardHeading: "Join Development",
       cardText: "Blockchain Development",
-      cardImage: cardImg,
+      cardImage: cardImg1,
       cardButton: (
         <button>
           Explore <IoIosArrowRoundForward className="card_btn_icon" />
@@ -42,7 +79,41 @@ function ServicesSection() {
       cardLogo: logo,
       cardHeading: "Join Development",
       cardText: "Blockchain Development",
-      cardImage: cardImg,
+      cardClass: "card2",
+      cardImage: cardImg3,
+      cardButton: (
+        <button style={{ backgroundColor: "black", color: "white" }}>
+          Explore{" "}
+          <IoIosArrowRoundForward className="card_btn_icon text-black" />
+        </button>
+      ),
+    },
+    {
+      cardLogo: logo,
+      cardHeading: "Join Development",
+      cardText: (
+        <p className="m-0">
+          Security <br /> ASS
+        </p>
+      ),
+      cardClass: "card3",
+      cardImage: cardImg2,
+      cardButton: (
+        <button>
+          Explore <IoIosArrowRoundForward className="card_btn_icon" />
+        </button>
+      ),
+    },
+    {
+      cardLogo: logo,
+      cardHeading: "Join Development",
+      cardText: (
+        <p className="m-0">
+          Motion <br /> Graphic
+        </p>
+      ),
+      cardClass: "card4",
+      cardImage: cardImg4,
       cardButton: (
         <button>
           Explore <IoIosArrowRoundForward className="card_btn_icon" />
@@ -67,8 +138,11 @@ function ServicesSection() {
         </div>
         <Row className="mt-2">
           {cardDetails.map((item, index) => (
-            <Col md={3}>
-              <Card key={index} className="services_card card1">
+            <Col md={3} className="mb-4">
+              <Card
+                key={index}
+                className={`services_card card1 ${item.cardClass}`}
+              >
                 <div className="card_header d-flex gap-2 align-items-center">
                   <img
                     src={item.cardLogo}
@@ -83,6 +157,7 @@ function ServicesSection() {
                     src={item.cardImage}
                     alt="card_img"
                     className="mt-4 card_img"
+                    style={{ width: 150 }}
                   />
                 </div>
                 <div className="card_footer">{item.cardButton}</div>

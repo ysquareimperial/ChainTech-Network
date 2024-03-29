@@ -70,7 +70,7 @@ nav {
 }
 .card_header p {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 .services_card {
   border: 2px solid black !important;
@@ -109,4 +109,17 @@ nav {
   background-image: linear-gradient(to right, #d8ff1a, #15ff99);
   border-radius: 20px;
   font-size: 20px;
+}
+
+.card2 {
+  background-color: #d9fdff !important;
+}
+.card3 {
+  background-color: #ffe6e6 !important;
+}
+.card4 {
+  background-color: #dfe3fb !important;
+}
+.card_body{
+  height: 35vh !important;
 }
